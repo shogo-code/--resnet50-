@@ -8,9 +8,11 @@ train_datagen = ImageDataGenerator(
     rescale=1./255,
     validation_split=0.2)
 
+model_path="学習用データフォルダパス"
+
 # 訓練データの読み込み
 train_generator = train_datagen.flow_from_directory(
-    'C:/Users/shogo11/Desktop/mig/Hanbetsu/Pre',#指定パス
+    'model_path',#指定パス
     target_size=(224, 224),
     batch_size=32,
     class_mode='binary',
@@ -18,7 +20,7 @@ train_generator = train_datagen.flow_from_directory(
 
 # 検証データの読み込み
 validation_generator = train_datagen.flow_from_directory(
-    'C:/Users/shogo11/Desktop/mig/Hanbetsu/Pre',#指定パス
+    'model_path',#指定パス
     target_size=(224, 224),
     batch_size=32,
     class_mode='binary',
@@ -43,4 +45,4 @@ model.fit(
     validation_data=validation_generator)
 
 # モデルの保存
-model.save("C:/Users/shogo11/Desktop/mig/Hanbetsu/Pre_model.tf")
+model.save("モデル保存先の絶対パス")
