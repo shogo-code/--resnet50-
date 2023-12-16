@@ -8,9 +8,11 @@ train_datagen_fine = ImageDataGenerator(
     rescale=1./255,
     validation_split=0.2)
 
+model_path="学習に使うデータのパス"
+
 # 訓練データの読み込み
 train_generator_fine = train_datagen_fine.flow_from_directory(
-    'C:/Users/shogo11/Desktop/mig/Hanbetsu/Fine',
+    'model_path',
     target_size=(224, 224),
     batch_size=32,
     class_mode='categorical',
@@ -18,7 +20,7 @@ train_generator_fine = train_datagen_fine.flow_from_directory(
 
 # 検証データの読み込み
 validation_generator_fine = train_datagen_fine.flow_from_directory(
-    'C:/Users/shogo11/Desktop/mig/Hanbetsu/Fine',
+    'model_path',
     target_size=(224, 224),
     batch_size=32,
     class_mode='categorical',
@@ -43,4 +45,4 @@ model_fine.fit(
     validation_data=validation_generator_fine)
 
 # モデルの保存
-model_fine.save("C:/Users/shogo11/Desktop/mig/Hanbetsu/Fine_model.tf")
+model_fine.save("モデル保存先前提絶対パス")
