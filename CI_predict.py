@@ -10,10 +10,10 @@ pre_model = load_model(pre_model_path)
 fine_model = load_model(fine_model_path)
 
 # 予測対象のフォルダ
-folder_path = 'C:/Users/shogo11/Desktop/mig/テスト' # 予測したい画像が含まれるフォルダのパス
+folder_path = '予測したい画像が含まれるフォルダのパス'  
 
 # カテゴリ
-fine_categories_jp = ['胡蝶', '早坂愛', 'マキマ']
+fine_categories_jp = ['a','b','c']
 
 # フォルダ内のすべての画像を予測
 for filename in os.listdir(folder_path):
