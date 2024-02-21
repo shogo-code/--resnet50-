@@ -4,8 +4,8 @@ import numpy as np
 import os
 
 # モデルの読み込み
-pre_model_path = "C:/Users/shogo11/Desktop/mig/Hanbetsu/Pre_model.tf"
-fine_model_path = "C:/Users/shogo11/Desktop/mig/Hanbetsu/Fine_model.tf"
+pre_model_path = "CI_model_pre.py実行後の保存先パス/Pre_model.tf"
+fine_model_path = "CI_model_fine.py実行後の保存先パス/Fine_model.tf"
 pre_model = load_model(pre_model_path)
 fine_model = load_model(fine_model_path)
 
