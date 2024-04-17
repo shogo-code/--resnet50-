@@ -8,11 +8,13 @@ CI_pridict.py；学習後に実行して予測させます。同時に指定フ�
 resnet.py；上２つをにまとめたものです。ファインチューニングにresnet-50を使用しています。学習後はCI_pridict.pyで予測します。  
 
 
-学習用データを用意し任意のフォルダに保存します。学習用画像が保存されているフォルダのパスをプログラム内のpathに指定します。python環境(VScodeなど)でCI_model_preとCI_model_fineの２つ、もしくはresnetのみを用いて実行し学習させます。前者はまずCI_model_fine.pyで特徴分類します。その後CI_predict.pyで予測を実行します。予測された画像は指定のフォルダに保存されます。pythonは3.10及び3.9.13で正常な動作が確認されています。リアルな画像ほどresnet.pyでの学習に向いています。ただし絵やキャラクターなどには適していません。その場合はCI_model_pre.pyとCI_model_fine.pyにより分類するといった具合です。
+学習用データを用意し任意のフォルダに保存します。学習用画像が保存されているフォルダのパスをプログラム内のpathに指定します。python環境(VScodeなど)でCI_model_preとCI_model_fineの２つ、もしくはresnetのみを用いて実行し学習させます。前者はまずCI_model_fine.pyで特徴分類します。その後CI_predict.pyで予測を実行します。予測された画像は指定のフォルダに保存されます。pythonは3.10及び3.9.13で正常な動作が確認されています。リアルな画像ほどresnet.pyでの学習に向いています。ただし絵やキャラクターなどには適していません。その場合はCI_model_pre.pyとCI_model_fine.py。
 
-判別基準となる”特徴”は学習に使う画像データから決まります。学習に使う画像データの手動選別はLoRAを作成する要領で行います。例えば望ましくない画像にはできるだけ無作為なものを選び、望ましい画像には特徴を絞ることを守っていれば問題なく動作します。
+判別基準となる”特徴”は学習に使う画像データから決まります。学習に使う画像データの手動選別はLoRAを作成する要領で行います。大体は**望ましくない画像にはできるだけ無作為なものを選び、望ましい画像には特徴を絞ること**を守っていれば問題なく動作します。
 
-epoc=10は製作者使用のRTX3060における一定の動作限界です。お使いのGPUに合わせて変更してください。
+epoc=10は製作者使用のRTX3060 12GBにおける一定の動作限界値です。お使いのGPUに合わせて適宜変更してください。
+
+
 
 "version resnet-50" is a fine-tuned implementation of a deep learning model for image file classification. I am using Resnet-50 as a pretrained model. Learning using Resnet-50 allows it to operate even on middle-class GPUs and achieves high discrimination performance. However, since it is built on the premise of training on the RTX3060 12GB used by the creator, we recommend changing the learning rate, number of epo, and batch size appropriately according to the VRAM of your GPU.
 
