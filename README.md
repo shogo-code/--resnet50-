@@ -1,5 +1,5 @@
 ### Git bush  
-'git clone https://github.com/shogo-code/--version-resnet50'
+`git clone https://github.com/shogo-code/--version-resnet50`
   
   
 ## Library installation  
