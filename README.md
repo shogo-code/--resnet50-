@@ -3,7 +3,6 @@
   
   
 ## Library installation  
-### Just open your terminal and run it  
 `pip install -r requirements.txt`  
 
 ## Preparation  
