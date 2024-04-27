@@ -1,5 +1,5 @@
 ## installation  
-# Just open your terminal and run it  
+### Just open your terminal and run it  
 `pip install -r requirements.txt`  
 
 ## what is this?  
