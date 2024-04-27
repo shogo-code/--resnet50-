@@ -2,7 +2,7 @@
 open your terminal and run it  
 `pip install -r requirements.txt`  
 
-
+## what is this?  
 "version resnet-50" is a fine-tuned implementation of a deep learning model for image file classification. I am using Resnet-50 as a pretrained model. Learning using Resnet-50 allows it to operate even on middle-class GPUs and achieves high discrimination performance. However, since it is built on the premise of training on the RTX3060 12GB used by the creator, we recommend changing the learning rate, number of epo, and batch size appropriately according to the VRAM of your GPU.
 
 Purpose
