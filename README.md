@@ -6,7 +6,7 @@
 `pip install -r requirements.txt`  
 
 ## Achievement  
-By replacing the process from the beginning to the middle of recognition learning with resnet-50, we have reduced the GPU usage rate for the entire learning to less than 12GB.
+By replacing the processing from the start to the middle of recognition training with resnet-50, we reduced the GPU usage rate for the entire training to less than 12GB. As a result of the benchmark, I finished learning in a total of just under 6 minutes.
 
 ## Preparation  
 put two training folders in same directory. At least 10 images.
