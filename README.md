@@ -1,10 +1,6 @@
-### Git bush  
-`git clone https://github.com/shogo-code/--version-resnet50`
-  
-  
-## Library installation  
+## installation  
 `pip install -r requirements.txt`  
-
+ git bush place you need!
 ## Achievement  
 By replacing the processing from the start to the middle of recognition training with resnet-50, we reduced the GPU usage rate for the entire training to less than 12GB. As a result of the benchmark, I finished learning in a total of just under 6 minutes.
 
